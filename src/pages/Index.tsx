@@ -3,7 +3,6 @@ import { ArrowRight, Command } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Navigation from "@/components/Navigation";
 import { FeaturesSection } from "@/components/features/FeaturesSection";
-import { PricingSection } from "@/components/pricing/PricingSection";
 import LogoCarousel from "@/components/LogoCarousel";
 import TestimonialsSection from "@/components/TestimonialsSection";
 import Footer from "@/components/Footer";
@@ -19,7 +18,7 @@ const Index = () => {
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        className="relative container px-4 pt-40 pb-20"
+        className="relative container px-4 pt-40 pb-20 flex flex-col items-center"
       >
         {/* Background */}
         <div 
@@ -34,43 +33,35 @@ const Index = () => {
         >
           <span className="text-sm font-medium">
             <Command className="w-4 h-4 inline-block mr-2" />
-            Next-gen crypto trading platform
+            AI-Powered Content Creation Platform
           </span>
         </motion.div>
         
-        <div className="max-w-4xl relative z-10">
-          <h1 className="text-5xl md:text-7xl font-normal mb-4 tracking-tight text-left">
+        <div className="max-w-4xl mx-auto relative z-10">
+          <h1 className="text-5xl md:text-7xl font-normal mb-12 tracking-tight text-center">
             <span className="text-gray-200">
-              <TextGenerateEffect words="Trade crypto with" />
-            </span>
-            <br />
-            <span className="text-white font-medium">
-              <TextGenerateEffect words="confidence & security" />
+              <TextGenerateEffect words="Your Agency's Growth Shouldn't Depend on Creator Mood Swings." />
             </span>
           </h1>
           
-          <motion.p 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.4 }}
-            className="text-lg md:text-xl text-gray-200 mb-8 max-w-2xl text-left"
-          >
-            Experience seamless cryptocurrency trading with advanced features, real-time analytics, and institutional-grade security.{" "}
-            <span className="text-white">Start trading in minutes.</span>
-          </motion.p>
-          
+          {/* Centered testimonial and waitlist */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.5 }}
-            className="flex flex-col sm:flex-row gap-4 items-start"
+            transition={{ delay: 0.4 }}
+            className="flex flex-col items-center mb-12 mt-16"
           >
-            <Button size="lg" className="button-gradient">
-              Start Trading Now
-            </Button>
-            <Button size="lg" variant="link" className="text-white">
-              View Markets <ArrowRight className="ml-2 w-4 h-4" />
-            </Button>
+            <p className="text-lg md:text-xl text-gray-200 italic mb-8">
+              "This is the best product I ever used"
+            </p>
+            <div className="text-center">
+              <h2 className="text-2xl md:text-3xl font-bold mb-4 text-white">
+                Join the Waitlist
+              </h2>
+              <Button size="lg" className="button-gradient">
+                Join Waitlist <ArrowRight className="ml-2 w-4 h-4" />
+              </Button>
+            </div>
           </motion.div>
         </div>
 
@@ -78,7 +69,7 @@ const Index = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.6 }}
-          className="relative mx-auto max-w-5xl mt-20"
+          className="w-full max-w-5xl mt-20"
         >
           <div className="glass rounded-xl overflow-hidden">
             <img
@@ -93,14 +84,87 @@ const Index = () => {
       {/* Logo Carousel */}
       <LogoCarousel />
 
-      {/* Features Section */}
+      {/* Features Section with alternating layouts */}
       <div id="features" className="bg-black">
         <FeaturesSection />
-      </div>
+        
+        {/* First Solution (Right Text) */}
+        <motion.div className="container px-4 py-20">
+          <div className="flex flex-col md:flex-row items-center gap-12">
+            <div className="w-full md:w-1/2">
+              <div className="glass rounded-xl overflow-hidden">
+                <img
+                  src="/lovable-uploads/feature-1.png"
+                  alt="Advanced Trading"
+                  className="w-full h-auto"
+                />
+              </div>
+            </div>
+            <div className="w-full md:w-1/2">
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">
+                Advanced Trading Solutions
+              </h2>
+              <p className="text-gray-400 text-lg mb-8">
+                State-of-the-art tools and features designed to enhance your trading experience.
+              </p>
+              <ul className="space-y-4">
+                {/* Add feature list items */}
+              </ul>
+            </div>
+          </div>
+        </motion.div>
 
-      {/* Pricing Section */}
-      <div id="pricing" className="bg-black">
-        <PricingSection />
+        {/* Second Solution (Left Text) */}
+        <motion.div className="container px-4 py-20">
+          <div className="flex flex-col md:flex-row-reverse items-center gap-12">
+            <div className="w-full md:w-1/2">
+              <div className="glass rounded-xl overflow-hidden">
+                <img
+                  src="/lovable-uploads/feature-2.png"
+                  alt="Real-time Analytics"
+                  className="w-full h-auto"
+                />
+              </div>
+            </div>
+            <div className="w-full md:w-1/2">
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">
+                Real-time Analytics
+              </h2>
+              <p className="text-gray-400 text-lg mb-8">
+                Make informed decisions with comprehensive market analysis and insights.
+              </p>
+              <ul className="space-y-4">
+                {/* Add feature list items */}
+              </ul>
+            </div>
+          </div>
+        </motion.div>
+
+        {/* Third Solution (Right Text) */}
+        <motion.div className="container px-4 py-20">
+          <div className="flex flex-col md:flex-row items-center gap-12">
+            <div className="w-full md:w-1/2">
+              <div className="glass rounded-xl overflow-hidden">
+                <img
+                  src="/lovable-uploads/feature-3.png"
+                  alt="Security Features"
+                  className="w-full h-auto"
+                />
+              </div>
+            </div>
+            <div className="w-full md:w-1/2">
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">
+                Enterprise-grade Security
+              </h2>
+              <p className="text-gray-400 text-lg mb-8">
+                Advanced security measures to protect your assets and transactions.
+              </p>
+              <ul className="space-y-4">
+                {/* Add feature list items */}
+              </ul>
+            </div>
+          </div>
+        </motion.div>
       </div>
 
       {/* Testimonials Section */}

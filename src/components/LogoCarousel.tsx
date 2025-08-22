@@ -50,6 +50,9 @@ const LogoCarousel = () => {
           />
         ))}
       </motion.div>
+      <p className="text-center text-sm text-gray-400 mb-8">
+        Trusted by leading creative agencies worldwide
+      </p>
     </div>
   );
 };

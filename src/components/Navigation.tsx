@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { Command, Menu } from "lucide-react";
 import { Button } from "./ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "./ui/sheet";
+import { Link } from "react-router-dom";
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -56,8 +57,10 @@ const Navigation = () => {
       <div className="mx-auto h-full px-6">
         <nav className="flex items-center justify-between h-full">
           <div className="flex items-center gap-2">
-            <Command className="w-5 h-5 text-primary" />
-            <span className="font-bold text-base">CryptoTrade</span>
+            <Link to="/" className="flex items-center space-x-2">
+              <Command className="w-6 h-6" />
+              <span className="font-bold text-xl">CreatorFlow</span>
+            </Link>
           </div>
 
           {/* Desktop Navigation */}

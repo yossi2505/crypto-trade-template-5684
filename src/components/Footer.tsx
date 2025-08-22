@@ -1,4 +1,4 @@
-import { Github, Twitter } from "lucide-react";
+import { Command, Github, Twitter } from "lucide-react";
 import { Button } from "./ui/button";
 
 const Footer = () => {
@@ -72,9 +72,15 @@ const Footer = () => {
           </div>
 
           <div className="mt-8 pt-8 border-t border-white/10">
-            <p className="text-sm text-muted-foreground text-center">
-              © {new Date().getFullYear()} Rezaul Arif. All rights reserved.
-            </p>
+            <div className="flex flex-col items-center justify-center">
+              <div className="flex items-center space-x-2">
+                <Command className="w-6 h-6" />
+                <span className="font-bold text-xl">CreatorFlow</span>
+              </div>
+              <p className="text-sm text-gray-400 mt-2">
+                © 2025 CreatorFlow. All rights reserved.
+              </p>
+            </div>
           </div>
         </div>
       </div>

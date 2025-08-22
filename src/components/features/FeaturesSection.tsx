@@ -8,14 +8,14 @@ export const FeaturesSection = () => {
     <section className="container px-4 py-24">
       {/* Header Section */}
       <div className="max-w-2xl mb-20">
-        <h2 className="text-5xl md:text-6xl font-normal mb-6 tracking-tight text-left">
-          Advanced Trading
-          <br />
-          <span className="text-gradient font-medium">Features & Tools</span>
-        </h2>
-        <p className="text-lg md:text-xl text-gray-400 text-left">
-          Experience professional-grade trading tools and features designed for both novice and experienced crypto traders.
-        </p>
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">
+            Everything You Need for Content Creation
+          </h2>
+          <p className="text-lg text-gray-400">
+            Powerful tools to streamline your agency's content workflow
+          </p>
+        </div>
       </div>
 
       <Tabs defaultValue={features[0].title} className="w-full">
